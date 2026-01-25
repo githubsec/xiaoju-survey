@@ -40,7 +40,7 @@ export const mockSensitiveResponseSchema: ResponseSchema = {
       answerEndTime: '',
     },
     bottomConf: {
-      logoImage: '/imgs/Logo.webp',
+      logoImage: '/imgs//imgs/ZNY8.png',
       logoImageWidth: '60%',
     },
     skinConf: {
@@ -50,7 +50,7 @@ export const mockSensitiveResponseSchema: ResponseSchema = {
         image: '',
       },
       themeConf: {
-        color: '#ffa600',
+        color: '#004EA1',
       },
       contentConf: {
         opacity: 100,
@@ -334,7 +334,7 @@ export const mockResponseSchema: ResponseSchema = {
       answerEndTime: '',
     },
     bottomConf: {
-      logoImage: '/imgs/Logo.webp',
+      logoImage: '/imgs/ZNY8.png',
       logoImageWidth: '60%',
     },
     skinConf: {
@@ -344,7 +344,7 @@ export const mockResponseSchema: ResponseSchema = {
         image: '',
       },
       themeConf: {
-        color: '#ffa600',
+        color: '#004EA1',
       },
       contentConf: {
         opacity: 100,

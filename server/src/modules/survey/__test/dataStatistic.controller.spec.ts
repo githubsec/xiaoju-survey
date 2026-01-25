@@ -244,7 +244,7 @@ describe('DataStatisticController', () => {
           },
           bottomConf: {
             // logoImage: '/imgs/Logo.webp',
-            logoImage: '',
+            logoImage: '/imgs/ZNY8.png',
             logoImageWidth: '60%',
           },
           skinConf: {
@@ -254,7 +254,7 @@ describe('DataStatisticController', () => {
               image: '',
             },
             themeConf: {
-              color: '#ffa600',
+              color: '#004EA1',
             },
             contentConf: {
               opacity: 100,

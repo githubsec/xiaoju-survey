@@ -80,7 +80,7 @@ const changePreset = (banner: any) => {
   const name = banner.group + '-' + banner.title
   let presets = {
     'bannerConf.bannerConfig.bgImage': banner.src,
-    'skinConf.themeConf.color': '#faa600',
+    'skinConf.themeConf.color': '#004EA1',
     'skinConf.backgroundConf.color': '#f6f7f9'
   }
 

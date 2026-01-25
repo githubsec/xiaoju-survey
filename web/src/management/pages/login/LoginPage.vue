@@ -2,12 +2,12 @@
   <div
     class="login-page"
     :style="{
-      background: `url('/imgs/create/background.webp') no-repeat bottom right`,
+      background: `url('/imgs/zny_bg.jpg') no-repeat bottom right`,
       'background-size': 'cover'
     }"
   >
     <div class="login-top">
-      <!-- <img src="/imgs/ZNY8.png" alt="logo" /> -->
+      <img src="/imgs/ZNY8.png" alt="logo" />
       <span>您好，请登录</span>
     </div>
     <div class="login-box">
@@ -291,8 +291,8 @@ const refreshCaptcha = async () => {
     }
 
     .register-button {
-      border-color: #faa600;
-      color: #faa600;
+      border-color: #004EA1;
+      color: #004EA1;
     }
   }
 

@@ -621,7 +621,7 @@ const onInput = () => {
       display: flex;
       align-items: center;
       font-size: 14px;
-      color: #faa600;
+      color: #004EA1;
       cursor: pointer;
       .iconfont {
         font-size: 14px;
@@ -634,7 +634,7 @@ const onInput = () => {
       margin-left: 10px;
       align-items: center;
       font-size: 14px;
-      color: #faa600;
+      color: #004EA1;
       cursor: pointer;
     }
     .enter-tip {
@@ -702,7 +702,7 @@ const onInput = () => {
     margin-bottom: 24px;
     a {
       cursor: pointer;
-      color: #ffa600;
+      color: #004EA1;
     }
   }
 }

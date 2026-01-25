@@ -126,7 +126,7 @@ onMounted(async () => {
 
   .launch-tip {
     font-size: 12px;
-    color: #fa881a;
+    color: #004EA1;
   }
 
   h2 {

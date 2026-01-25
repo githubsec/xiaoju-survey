@@ -62,9 +62,9 @@ const call = (t) => {
       cursor: pointer;
       height: 28px;
       &:hover {
-        background: #fef6e6 100%;
+        background: #e8f4fd 100%;
         span.more_con {
-          color: #faa600;
+          color: #004EA1;
         }
       }
       text-align: center;

@@ -7,7 +7,7 @@
     }"
   >
     <div class="login-top">
-      <img src="/imgs/Logo.webp" alt="logo" />
+      <!-- <img src="/imgs/ZNY8.png" alt="logo" /> -->
       <span>您好，请登录</span>
     </div>
     <div class="login-box">

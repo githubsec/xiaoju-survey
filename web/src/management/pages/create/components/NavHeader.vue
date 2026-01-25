@@ -20,7 +20,8 @@ withDefaults(defineProps<Props>(), {
   boxShadow: true
 })
 
-const img = '/imgs/s-logo.webp'
+// const img = '/imgs/ZNY8.png'
+const img = ''
 
 const router = useRouter()
 

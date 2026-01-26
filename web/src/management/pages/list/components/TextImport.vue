@@ -146,7 +146,7 @@ const coypText = (item: { content: string }) => {
     white-space: pre;
     .copy-text {
       cursor: pointer;
-      color: #FAA600;
+      color: #004EA1;
       font-size: 12px;
     }
   }

@@ -10,8 +10,8 @@
         class="generating-notice"
       >
         <span style="color: #6E707C;">请稍后，生成问卷努力敲击中....</span>
-        <span 
-          style="color: #FAA600; margin-left: 8px; cursor: pointer;"
+        <span
+          style="color: #004EA1; margin-left: 8px; cursor: pointer;"
           @click="handleStopGenerating"
         >停止生成</span>
       </div>
@@ -124,7 +124,7 @@ const handleDislike = () => {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #FAA600;
+    background: #004EA1;
     margin: 0 2px;
     animation: dot-bounce 1.4s infinite ease-in-out;
 
@@ -151,10 +151,10 @@ const handleDislike = () => {
   &.user {
     flex-direction: row-reverse;
     .bubble {
-      background: #FEF6E6;
-      border: 1px solid #FEF6E6;
+      background: #e8f4fd;
+      border: 1px solid #e8f4fd;
       margin-left: auto;
-      
+
       &::after {
         content: '';
         position: absolute;
@@ -162,7 +162,7 @@ const handleDislike = () => {
         top: 16px;
         width: 0;
         height: 0;
-        border-left: 8px solid #FEF6E6;
+        border-left: 8px solid #e8f4fd;
         border-top: 6px solid transparent;
         border-bottom: 6px solid transparent;
       }
@@ -191,10 +191,10 @@ const handleDislike = () => {
     .reasoning-content {
       margin-bottom: 12px;
       padding: 12px;
-      background: rgba(250, 166, 0, 0.1);
+      background: rgba(0, 78, 161, 0.1);
       border-radius: 8px;
-      border-left: 3px solid #FAA600;
-      
+      border-left: 3px solid #004EA1;
+
       .reasoning-header {
         display: flex;
         align-items: center;
@@ -202,14 +202,14 @@ const handleDislike = () => {
         font-family: PingFangSC;
         font-size: 12px;
         font-weight: 500;
-        color: #FAA600;
-        
+        color: #004EA1;
+
         .reasoning-icon {
           font-size: 14px;
           margin-right: 4px;
         }
       }
-      
+
       .reasoning-text {
         font-family: PingFangSC;
         font-size: 13px;
@@ -237,17 +237,17 @@ const handleDislike = () => {
         font-weight: normal;
         line-height: 18px;
         letter-spacing: normal;
-        color: #FAA600;
+        color: #004EA1;
 
         .icon-zan,
         .icon-cai {
           color: #C8C9CD;
-        }   
-        
+        }
+
         .iconfont {
           font-size: 16px;
         }
-        
+
         &:hover {
           opacity: 0.8;
         }

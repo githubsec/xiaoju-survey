@@ -516,7 +516,7 @@ const onInput = () => {
       .welcome-title {
         font-family: PingFangSC;
         font-size: 20px;
-        background: linear-gradient(259deg, #FDD200 0%, #FAA600 89%);
+        background: linear-gradient(259deg, #004EA1 0%, #1575d4 89%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -540,17 +540,17 @@ const onInput = () => {
         .example-button {
           padding: 12px 24px;
           border-radius: 6px;
-          background: #FEF6E6;
-          color: #4A4C5B;
+          background: #e8f4fd;
+          color: #004EA1;
           font-size: 14px;
           font-weight: normal;
           line-height: normal;
           cursor: pointer;
           transition: all 0.2s;
-          border: 1px solid #FDD200;
-          color: #FAA600;
+          border: 1px solid #004EA1;
           &:hover {
-            background: #FDD200;
+            background: #1575d4;
+            color: #fff;
             transform: translateY(-2px);
           }
         }

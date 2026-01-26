@@ -558,12 +558,12 @@ defineExpose({
   .ai-tag {
     padding: 0 4px;
     border-radius: 2px;
-    background: #FEF6E6;
-    border: 1px solid #FAA600;
+    background: #e8f4fd;
+    border: 1px solid #004EA1;
     font-family: PingFangSC;
     font-size: 10px;
     line-height: 16px;
-    color: #FAA600;
+    color: #004EA1;
   }
 }
 

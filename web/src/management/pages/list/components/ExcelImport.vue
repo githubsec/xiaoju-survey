@@ -354,11 +354,11 @@ const handleshowCreateFormExcelImport = () => {
   margin-bottom: 15px;
 }
 
-.step-number-icon-container {  
+.step-number-icon-container {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #FAA600;
+  background-color: #004EA1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -370,7 +370,7 @@ const handleshowCreateFormExcelImport = () => {
   height: 14px;
   border-radius: 50%;
   font-size: 14px;
-  color: #FEF6E6;
+  color: #fff;
   background-color: transparent;
   text-align: center;
   line-height: 14px;
@@ -402,12 +402,12 @@ const handleshowCreateFormExcelImport = () => {
 }
 
 .download-button:hover{
-  border-color: #E25822;
+  border-color: #004EA1;
 }
 
 .download-button:hover .button-icon,
 .download-button:hover .download-button-text {
-  color: #E25822;
+  color: #004EA1;
 }
 
 .button-icon {
@@ -533,7 +533,7 @@ const handleshowCreateFormExcelImport = () => {
   height: 50px;
   border-radius: 50%;
   font-size: 50px;
-  color: #FEF6E6;
+  color: #fff;
   background-color: transparent;
   text-align: center;
   line-height: 50px;

@@ -552,7 +552,7 @@ const onAIGenerteChange = (newQuestionList: Array<any>) => {
       }
 
       .create-btn {
-        background: #4a4c5b;
+        background: #004EA1;
         color: #fff;
       }
 

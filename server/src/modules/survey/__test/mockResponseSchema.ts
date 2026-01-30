@@ -40,7 +40,7 @@ export const mockSensitiveResponseSchema: ResponseSchema = {
       answerEndTime: '',
     },
     bottomConf: {
-      logoImage: '/imgs//imgs/ZNY8.png',
+      logoImage: '/imgs/ZNY8.png',
       logoImageWidth: '60%',
     },
     skinConf: {

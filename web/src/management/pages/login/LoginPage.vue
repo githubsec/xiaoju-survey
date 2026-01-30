@@ -175,7 +175,7 @@ const rules = {
 }
 
 onMounted(() => {
-  refreshCaptcha()
+  // refreshCaptcha()
 })
 
 const pending = reactive<Pending>({

@@ -115,12 +115,12 @@
           </div>
           <span>文本导入</span>
         </div>
-        <div class="create-method-item" @click="opemAIGenerate">
+        <!-- <div class="create-method-item" @click="opemAIGenerate">
           <div class="icon">
             <i class="iconfont icon-AIshengcheng"></i>
           </div>
           <span>AI生成</span>
-        </div>
+        </div> -->
         <div class="create-method-item" @click="openExcelImport">
           <div class="icon">
             <i class="iconfont icon-Exceldaoru"></i>

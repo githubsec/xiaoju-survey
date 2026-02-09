@@ -61,14 +61,21 @@ export default defineComponent({
         rating.value = num
       }
     }
+
+    // 为每个可能的数值预先绑定handleClick，避免闭包问题
+    const createClickHandler = (num) => {
+      return handleClick.bind(null, num)
+    }
+
     return {
       rating,
       range,
-      handleClick
+      handleClick,
+      createClickHandler
     }
   },
   render() {
-    const { rating, range, iconClass, rangeConfig } = this
+    const { rating, range, iconClass, rangeConfig, createClickHandler } = this
     const hasSelection = rating > 0
 
     return (
@@ -83,11 +90,7 @@ export default defineComponent({
               <div key={'rate' + num} class="rate-item-wrapper">
                 <div
                   class={['rate-item', num <= rating ? 'on' : 'off', iconClass]}
-                  data-num={num}
-                  onClick={(e) => {
-                    const value = parseInt(e.currentTarget.dataset.num, 10)
-                    this.handleClick(value)
-                  }}
+                  onClick={createClickHandler(num)}
                 >
                   {iconClass === 'number' ? num : ''}
                 </div>

@@ -80,7 +80,7 @@ export default defineComponent({
             const shouldShowExplain = explain && (!hasSelection || num === rating)
 
             return (
-              <div key={'rate' + index} class="rate-item-wrapper">
+              <div key={'rate' + num} class="rate-item-wrapper">
                 <div
                   class={['rate-item', num <= rating ? 'on' : 'off', iconClass]}
                   data-num={num}

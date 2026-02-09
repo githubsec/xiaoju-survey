@@ -80,7 +80,6 @@ export default defineComponent({
         <div class="question-block">
           {this.BlockComponent ? (
             <BlockComponent
-              readonly
               {...props}
               onBlur={this.onBlur}
               onFocus={this.onFocus}

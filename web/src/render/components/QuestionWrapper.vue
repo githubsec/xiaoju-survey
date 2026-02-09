@@ -99,7 +99,6 @@ const updateFormData = (value) => {
   const key = props.moduleConfig.field
   const formData = cloneDeep(formValues.value)
   formData[key] = value
-  console.log(formData)
   return formData
 }
 

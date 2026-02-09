@@ -64,7 +64,9 @@ export default defineComponent({
 
     // 为每个可能的数值预先绑定handleClick，避免闭包问题
     const createClickHandler = (num) => {
-      return handleClick.bind(null, num)
+      return () => {
+        handleClick(num)
+      }
     }
 
     return {

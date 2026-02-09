@@ -131,6 +131,7 @@ export default defineComponent({
           iconClass={starClass}
           rangeConfig={rangeConfig}
           onChange={confirmStar}
+          key={`star-rate-${field}`}
         />
         {isShowInput && (
           <selectMoreView

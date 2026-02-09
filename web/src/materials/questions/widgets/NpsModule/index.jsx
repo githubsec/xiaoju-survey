@@ -140,6 +140,7 @@ export default defineComponent({
           iconClass="number"
           onChange={confirmNps}
           class={!readonly ? 'radio-nps-hover' : ''}
+          key={`nps-rate-${field}`}
         />
         {isShowInput && (
           <selectMoreView

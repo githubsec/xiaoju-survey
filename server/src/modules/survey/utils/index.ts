@@ -16,11 +16,17 @@ const schemaDataMap = {
 
 export async function getSchemaBySurveyType(surveyType: string) {
   // Implement your logic here
+  console.log('[getSchemaBySurveyType] surveyType:', surveyType);
+  console.log('[getSchemaBySurveyType] templateBase.skinConf:', JSON.stringify(templateBase.skinConf, null, 2));
+
   const codeData = get(schemaDataMap, surveyType);
   if (!codeData) {
     throw new Error('问卷类型不存在');
   }
   const code = Object.assign({}, templateBase, codeData);
+
+  console.log('[getSchemaBySurveyType] 合并后 code.skinConf:', JSON.stringify(code.skinConf, null, 2));
+
   const nowMoment = moment();
   code.baseConf.beginTime = nowMoment.format('YYYY-MM-DD HH:mm:ss');
   code.baseConf.endTime = nowMoment

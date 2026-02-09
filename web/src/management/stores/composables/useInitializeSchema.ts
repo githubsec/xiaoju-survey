@@ -24,10 +24,27 @@ export default function useInitializeSchema(
     useLogicEngine(schema)
 
   function initSchema({ metaData, codeData }: { metaData: any; codeData: any }) {
+    console.log('[initSchema] 收到的 codeData.skinConf:', JSON.stringify(codeData.skinConf, null, 2))
+
     schema.metaData = metaData
     schema.bannerConf = merge({}, schema.bannerConf, codeData.bannerConf)
     schema.bottomConf = merge({}, schema.bottomConf, codeData.bottomConf)
     schema.skinConf = merge({}, schema.skinConf, codeData.skinConf)
+
+    console.log('[initSchema] merge 后的 schema.skinConf:', JSON.stringify(schema.skinConf, null, 2))
+
+    // 确保主题色有默认值
+    if (!schema.skinConf.themeConf) {
+      console.log('[initSchema] themeConf 不存在，创建默认对象')
+      schema.skinConf.themeConf = {}
+    }
+    if (!schema.skinConf.themeConf.color) {
+      console.log('[initSchema] themeConf.color 不存在，设置为 #004EA1')
+      schema.skinConf.themeConf.color = '#004EA1'
+    }
+
+    console.log('[initSchema] 最终的 schema.skinConf.themeConf.color:', schema.skinConf.themeConf.color)
+
     schema.baseConf = merge({}, schema.baseConf, codeData.baseConf)
     schema.logicConf = codeData.logicConf
     schema.pageConf = codeData.pageConf

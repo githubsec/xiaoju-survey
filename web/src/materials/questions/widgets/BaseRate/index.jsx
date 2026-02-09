@@ -83,8 +83,10 @@ export default defineComponent({
               <div key={'rate' + index} class="rate-item-wrapper">
                 <div
                   class={['rate-item', num <= rating ? 'on' : 'off', iconClass]}
-                  onClick={() => {
-                    this.handleClick(num)
+                  data-num={num}
+                  onClick={(e) => {
+                    const value = parseInt(e.currentTarget.dataset.num, 10)
+                    this.handleClick(value)
                   }}
                 >
                   {iconClass === 'number' ? num : ''}

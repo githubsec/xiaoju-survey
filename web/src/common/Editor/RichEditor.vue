@@ -53,6 +53,10 @@ const toolbarConfig = computed(() => {
       'fontSize',
       'bgColor', // 背景色
       'bold',
+      'indent',
+      'delIndent',
+      'justifyLeft',
+      'justifyCenter',
       'insertLink' // 链接
     ]
   }

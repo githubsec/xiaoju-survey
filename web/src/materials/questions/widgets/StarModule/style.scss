@@ -22,3 +22,31 @@
     color: #e3e4e8;
   }
 }
+
+.star-wrapper-main {
+  // 横向文案容器
+  .all-explains-row {
+    display: flex;          // 关键：开启弹性布局实现横向排列
+    justify-content: space-between;
+    flex-wrap: wrap;        // 允许换行（如果屏幕太窄，文案多的话会自动换行，体验更好）
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;        // 与上面的星星组件留点空隙
+    line-height: 1.5;
+    width: 100%;
+
+    .explain-item {
+      // margin-right: 16px;   // 每个文案之间的间距
+      // white-space: nowrap;  // 强制不换行（如果想让长文案自动换行，可以删掉这一行）
+      flex: 1;               // 👈 关键：让每个项目占据剩余空间的等份
+      text-align: center;    // 让文字在各自的区域内居中
+      padding: 0 4px;        // 可选：给文字左右一点呼吸空间
+      
+      // 可选：给文案加个小图标或者颜色区分
+      // &:before {
+      //   content: "💡";
+      //   margin-right: 4px;
+      // }
+    }
+  }
+}

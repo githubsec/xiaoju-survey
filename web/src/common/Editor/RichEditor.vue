@@ -50,6 +50,7 @@ const toolbarConfig = computed(() => {
   const config = {
     toolbarKeys: [
       'color', // 字体色
+      'fontSize',
       'bgColor', // 背景色
       'bold',
       'insertLink' // 链接

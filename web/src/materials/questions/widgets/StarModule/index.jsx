@@ -111,13 +111,12 @@ export default defineComponent({
       rating,
       readonly,
       starClass,
+      currentRangeConfig,
       isShowInput,
       onMoreDataChange,
       rangeConfig,
       selectMoreView,
-      confirmStar,
-      starMin,
-      starMax
+      confirmStar
     } = this
 
     return (
@@ -125,13 +124,11 @@ export default defineComponent({
         <BaseRate
           name={field}
           value={value}
-          min={starMin}
-          max={starMax}
           readonly={readonly}
           iconClass={starClass}
-          rangeConfig={rangeConfig}
           onChange={confirmStar}
         />
+        {currentRangeConfig && <p class="explain radio-star">{currentRangeConfig.explain}</p>}
         {isShowInput && (
           <selectMoreView
             showTitle={false}

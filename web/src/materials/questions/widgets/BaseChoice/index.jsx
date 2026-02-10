@@ -108,7 +108,7 @@ export default defineComponent({
                 <div
                   key={item.hash || item.value}
                   style={this.choiceStyle}
-                  class={['choice-outer']}
+                  class={['choice-outer', item.others ? 'full-width' : '']}
                 >
                   <div style="position: relative" class="choice-content">
                     {!/^\s*$/.test(item.text) && (

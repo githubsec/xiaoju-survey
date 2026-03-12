@@ -1,33 +1,4 @@
-<div align=center>
-  <p>
-    <img src="https://img-hxy021.didistatic.com/static/starimg/img/j8lBA6yy201698840712358.jpg"  width="300" align='center' />
-  </p>
-  <div>
-    <a href="https://github.com/didi/xiaoju-survey/graphs/contributors">
-      <img src="https://img.shields.io/badge/node-%3E=18-green" alt="commit">
-    </a>
-    <a href="https://app.codecov.io/github/didi/xiaoju-survey">
-      <img src="https://img.shields.io/codecov/c/github/didi/xiaoju-survey" alt="codecov">
-    </a>
-    <a href="https://github.com/didi/xiaoju-survey/issues">
-      <img src="https://img.shields.io/github/issues/didi/xiaoju-survey" alt="issues">
-    </a>
-    <a href="https://github.com/didi/xiaoju-survey/graphs/contributors">
-      <img src="https://img.shields.io/github/last-commit/didi/xiaoju-survey?color=red" alt="commit">
-    </a>
-    <a href="https://github.com/didi/xiaoju-survey/pulls">
-      <img src="https://img.shields.io/badge/PRs-welcome-%23ffa600" alt="pr">
-    </a>
-    <a href="https://xiaojusurvey.didi.cn">
-      <img src="https://img.shields.io/badge/help-%E5%AE%98%E7%BD%91-blue" alt="docs">
-    </a>
-    <a href="https://github.com/didi/xiaoju-survey/blob/main/README_EN.md">
-      <img src="https://img.shields.io/badge/help-README_EN-50c62a" alt="docs">
-    </a>
-  </div>
-</div>
 
-<br />
 
 &ensp;&ensp;**XIAOJUSURVEY**是一套轻量、安全的调研系统，提供面向个人和企业的一站式产品级解决方案，用于构建各类问卷、考试、测评和复杂表单，快速满足各类线上调研场景。
 
@@ -168,35 +139,3 @@ npm run serve
   - 包含 `curl`、`vim`、`git` 等工具
 
 在 `docker-compose.yaml` 中修改镜像标签即可切换版本。
-
-<br />
-
-## Star
-
-开源不易，如果该项目对你有帮助，请 star 一下 ❤️❤️❤️，你的支持是我们最大的动力。
-
-[![Star History Chart](https://api.star-history.com/svg?repos=didi/xiaoju-survey&type=Date)](https://star-history.com/#didi/xiaoju-survey&Date)
-
-## 交流群
-
-官方群会发布项目最新消息、建设计划和社区活动，欢迎你的加入。
-
-<img src="https://img-hxy021.didistatic.com/static/starimg/img/KXKvc7sjHz1700061188156.png"  width="200" />
-
-_任何问题和合作可以联系小助手。_
-
-## 案例
-
-如果你使用了该项目，请记录反馈：[我在使用](https://github.com/didi/xiaoju-survey/issues/64)，你的支持是我们最大的动力。
-
-## Future Tasks
-
-[欢迎了解项目发展和共建](https://github.com/didi/xiaoju-survey/issues/85)，你的支持是我们最大的动力。
-
-## 贡献
-
-如果你想成为贡献者或者扩展技术栈，请查看：[贡献者指南](https://xiaojusurvey.didi.cn/docs/next/share/%E5%A6%82%E4%BD%95%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE)，你的加入使我们最大的荣幸。
-
-## CHANGELOG
-
-关注项目重大变更：[MAJOR CHANGELOG](https://github.com/didi/xiaoju-survey/issues/48)。

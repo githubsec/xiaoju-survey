@@ -45,7 +45,13 @@
       flex-wrap: wrap;
 
       .choice-outer {
-        width: 33%;
+        width: calc(100% / 3);
+
+        // 针对包含 "others" 的选项，强制独占一行
+        &.full-width {
+          width: 100%;
+          padding-right: 0; // 清除右边距，使其真正占满
+        }
 
         .question {
           padding-top: 0;

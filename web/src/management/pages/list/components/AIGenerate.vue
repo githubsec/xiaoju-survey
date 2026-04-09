@@ -5,7 +5,7 @@
       <div class="chat-container" ref="chatContainerRef">
         <div class="panel-background"></div>
         <div v-if="messages.length === 0" class="initial-state">
-          <div class="welcome-title">您好，我叫XIAOJU</div>
+          <div class="welcome-title">您好</div>
           <div class="welcome-sub">欢迎使用AI生成问卷！目前，我能够通过自然语言生成基础调研类问卷。例如，我可以生成：</div>
           <div class="example-buttons">
             <div 

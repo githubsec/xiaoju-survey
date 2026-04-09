@@ -62,6 +62,7 @@ import { noDownloadTaskConfig } from '@/management/config/listConfig'
 
 import { deleteDownloadTask, getDownloadTaskList } from '@/management/api/download'
 import { CODE_MAP } from '@/management/api/base'
+import { openDownloadUrl } from '@/management/utils/download'
 
 const loading = ref(false)
 const pageSize = ref(10)
@@ -100,7 +101,10 @@ let currentDelRow: Record<string, any> = {}
 // 下载文件
 const handleDownload = async (row: any) => {
   if (row.url) {
-    window.open(row.url)
+    const opened = openDownloadUrl(row.url)
+    if (!opened) {
+      ElMessage.error('下载地址无效，请刷新后重试')
+    }
   } else {
     ElMessageBox.alert('文件不存在')
   }

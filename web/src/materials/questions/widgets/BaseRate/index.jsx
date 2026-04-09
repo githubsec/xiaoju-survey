@@ -27,10 +27,6 @@ export default defineComponent({
     readonly: {
       type: Boolean,
       default: false
-    },
-    rangeConfig: {
-      type: Object,
-      default: () => ({})
     }
   },
   emits: ['change'],
@@ -79,24 +75,21 @@ export default defineComponent({
   render() {
     const { rating, range, iconClass, rangeConfig, createClickHandler } = this
     const hasSelection = rating > 0
+    const { rating, range, iconClass } = this
 
     return (
       <div class="rate-wrapper-main">
         <div class="rate-box">
           {range.map((num, index) => {
-            const explain = rangeConfig[num]?.explain
-            // 未选择时显示所有释义，选择后只显示选中项的释义
-            const shouldShowExplain = explain && (!hasSelection || num === rating)
-
             return (
-              <div key={'rate' + num} class="rate-item-wrapper">
-                <div
-                  class={['rate-item', num <= rating ? 'on' : 'off', iconClass]}
-                  onClick={createClickHandler(num)}
-                >
-                  {iconClass === 'number' ? num : ''}
-                </div>
-                {shouldShowExplain && <div class="rate-explain">{explain}</div>}
+              <div
+                class={['rate-item', num <= rating ? 'on' : 'off', iconClass]}
+                key={'rate' + index}
+                onClick={() => {
+                  this.handleClick(num)
+                }}
+              >
+                {iconClass === 'number' ? num : ''}
               </div>
             )
           })}

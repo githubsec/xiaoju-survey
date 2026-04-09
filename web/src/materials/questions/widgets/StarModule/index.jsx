@@ -111,28 +111,46 @@ export default defineComponent({
       rating,
       readonly,
       starClass,
+      currentRangeConfig,
       isShowInput,
       onMoreDataChange,
       rangeConfig,
       selectMoreView,
-      confirmStar,
-      starMin,
-      starMax
+      confirmStar
     } = this
+
+  // 👇 核心逻辑：生成所有 explain 的 JSX 元素
+  // 注意：只有当用户没有选择（rating <= 0）且 rangeConfig 存在时才显示
+    const allExplains = !rating && rangeConfig ? (
+      <div class="all-explains-row">
+        {Object.keys(rangeConfig).map((score) => {
+          const config = rangeConfig[score];
+          // 确保 config 存在且有 explain 字段
+          if (config && config.explain) {
+            return (
+              <span key={`explain-${score}`} class="explain-item">
+              {/* 这里的样式可以根据设计图调整，例如 [1]: 文案 */}
+              {config.explain}
+            </span>
+            );
+          }
+          return null;
+        })}
+      </div>
+    ) : null;
 
     return (
       <div class="star-wrapper-main">
         <BaseRate
           name={field}
           value={value}
-          min={starMin}
-          max={starMax}
           readonly={readonly}
           iconClass={starClass}
-          rangeConfig={rangeConfig}
           onChange={confirmStar}
           key={`star-rate-${field}`}
         />
+        {allExplains}
+        {currentRangeConfig && <p class="explain radio-star">{currentRangeConfig.explain}</p>}
         {isShowInput && (
           <selectMoreView
             showTitle={false}

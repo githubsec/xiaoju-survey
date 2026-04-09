@@ -66,6 +66,7 @@ import { getRecycleList } from '@/management/api/analysis'
 import { noDataConfig } from '@/management/config/analysisConfig'
 import DataTable from '../components/DataTable.vue'
 import { createDownloadTask, getDownloadTask } from '@/management/api/download'
+import { openDownloadUrl } from '@/management/utils/download'
 
 const dataTableState = reactive({
   mainTableLoading: false,
@@ -162,27 +163,50 @@ const confirmDownload = async () => {
   if (isDownloading.value) {
     return
   }
+  let downloadWindow = null
   try {
     isDownloading.value = true
+    downloadWindow = window.open('', '_blank')
     const createRes = await createDownloadTask({
       surveyId: route.params.id,
       isMasked: downloadForm.isMasked
     })
     dataTableState.downloadDialogVisible = false
     if (createRes.code !== 200) {
+      if (downloadWindow && !downloadWindow.closed) {
+        downloadWindow.close()
+      }
       ElMessage.error('导出失败，请重试')
+      return
     }
     ElMessage.success(`下载文件计算中，可前往“下载中心”查看`)
     try {
       const taskInfo = await checkIsTaskFinished(createRes.data.taskId)
-      if (taskInfo.url) {
-        window.open(taskInfo.url)
+      if (taskInfo.status === 'failed') {
+        if (downloadWindow && !downloadWindow.closed) {
+          downloadWindow.close()
+        }
+        ElMessage.error('导出失败，请前往“下载中心”查看详情')
+        return
+      }
+      if (taskInfo.url && openDownloadUrl(taskInfo.url, downloadWindow)) {
         ElMessage.success('导出成功')
+      } else {
+        if (downloadWindow && !downloadWindow.closed) {
+          downloadWindow.close()
+        }
+        ElMessage.error('下载地址无效，请前往“下载中心”重试')
       }
     } catch (error) {
+      if (downloadWindow && !downloadWindow.closed) {
+        downloadWindow.close()
+      }
       ElMessage.error('导出失败，请重试')
     }
   } catch (error) {
+    if (downloadWindow && !downloadWindow.closed) {
+      downloadWindow.close()
+    }
     ElMessage.error('导出失败，请重试')
   } finally {
     isDownloading.value = false
@@ -195,7 +219,7 @@ const checkIsTaskFinished = (taskId) => {
       getDownloadTask(taskId).then((res) => {
         if (res.code === 200 && res.data) {
           const status = res.data.status
-          if (status === 'new' || status === 'computing') {
+          if (status === 'waiting' || status === 'computing') {
             setTimeout(() => {
               run()
             }, 5000)
@@ -205,6 +229,8 @@ const checkIsTaskFinished = (taskId) => {
         } else {
           reject('导出失败')
         }
+      }).catch(() => {
+        reject('导出失败')
       })
     }
     run()
